@@ -1,0 +1,22 @@
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+.div_form {
+    margin: auto;
+    padding: auto;
+}
+/* .container {
+    padding: 2rem 0rem;
+  }
+  
+  h4 {
+    margin: 2rem 0rem 1rem;
+  }
+  
+  .table-image {
+      vertical-align: middle;
+    }
+   */
+  
