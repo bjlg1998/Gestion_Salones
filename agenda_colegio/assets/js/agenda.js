@@ -219,17 +219,21 @@ $(document).ready(function () {
             }
         });
     }
-    function convertDateFormat(string) {
-        var info = string.split('/').reverse().join('-');
-        return info;
+    function convertDateFormat() {
+        let date = new Date()
+        let day = `${(date.getDate())}`.padStart(2,'0');
+        let month = `${(date.getMonth()+1)}`.padStart(2,'0');
+        let year = date.getFullYear();
+
+        fecha = `${year}-${month}-${day}`;
+
+        return fecha;
    }
 
     function template_tabla_agenda(datos) {
         template = '';
         datos.forEach(element => {
-            fecha_actual = new Date()
-            fecha_actual = fecha_actual.toLocaleDateString()
-            fecha_actual = convertDateFormat(fecha_actual)
+            fecha_actual = convertDateFormat()
             if (element['fecha'] <= fecha_actual) {
                 color = `style="background-color:#98fb98"`;
             }else{
